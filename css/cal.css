@@ -1,0 +1,243 @@
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	background: #e2e2e2;
+	font-family: "YouYuan";
+}
+.calendar{
+	background: #fff;
+	width: 412px;
+	height: 417px;
+	margin:0 auto;
+    box-shadow: 0 1px 4px #c8c8c8;
+}
+/*日历头部样式设置*/
+.head{
+	height:52px;
+	background: #2d2d2d;
+	color:#fff;
+}
+.logo{
+	padding: 10px;
+	float: left;
+}
+.switch_day{
+	display: inline-block;
+	font-size: 18px;
+	width: 32px;
+	height: 32px;
+	line-height: 37px;
+	text-align: center;
+	background: url(../img/logo.png);
+}
+.logo_day{
+	float:left;
+}
+.new_day{
+	margin-top: 10px;
+	display: inline-block;
+	font-size: 16px;
+	line-height: 18px;
+}
+.old_day{
+	font-size: 12px;
+	line-height: 14px;
+}
+.switch_year_month_day{
+	font-size: 12px;
+	padding: 0;
+}
+.switch_year_current{
+	display: inline-block;
+	height: 18px;
+}
+.switch_year{
+	cursor:pointer;
+	margin-top: 14px;
+	list-style: none;
+	float: left;
+	margin-left: 26px;
+	position: relative;
+}
+.year_list{
+	position: absolute;
+	z-index: 1;
+	display: none;
+	/*滚动条设置*/
+	height: 225px;
+	overflow-x:hidden; 
+	overflow-y:scroll;
+}
+::-webkit-scrollbar {
+		  width: 2px;
+	} /* 这是针对缺省样式 (必须的) */
+::-webkit-scrollbar-thumb {
+	background-color: rgba(200, 200, 200, 0.4);
+} /* 滑块颜色 */
+.switch_year li{
+	width: 48px;
+	list-style: none;
+	padding-left: 16px;
+	background: rgba(45,45,45,0.78);
+	line-height: 18px;
+	height: 18px;
+	border-top: 1px solid rgba(69,69,69,0.8);
+}
+.switch_year li:hover{
+	background: rgba(107,197,13,0.72);
+}
+.switch_month_current{
+	display: inline-block;
+	height: 18px;
+}
+.switch_month{
+	cursor:pointer;
+	margin-top: 14px;
+	list-style: none;
+	float: left;
+	margin-left: 16px;
+	position: relative;
+	width: 50px;
+}
+.month_list{
+	position: absolute;
+	display: none;
+	width: 40px;
+	height: 225px;
+	z-index: 1;
+}
+.switch_month li{
+	width: 40px;
+	list-style: none;
+	padding-left: 13px;
+	background: rgba(45,45,45,0.78);
+	line-height: 18px;
+	height: 18px;
+	border-top: 1px solid rgba(69,69,69,0.8);
+}
+.switch_month li:hover{
+	background: rgba(107,197,13,0.72);
+}
+.switch_today{
+	cursor:pointer;
+	margin-top: 14px;
+	list-style: none;
+	float: left;
+	margin-left: 12px;
+}
+.switch_today img{
+	width: 12px;
+	height: 11px;
+	vertical-align: text-bottom;
+}
+/*日历表格基本样式设置*/
+.calendar_box{
+	height: 28px;
+	background:#2d2d2d; 
+}
+.calendar_new_table{
+	width: 392px;
+	margin:0 auto;
+	border-collapse: collapse;
+	text-align: center;
+}
+.calendar_new_table th{
+	color:#fff;
+	width: 54px;
+	font-size: 14px;
+	height: 26px;
+	background: #2d2d2d;
+	line-height: 28px;
+}
+.calendar_new_table td{
+	position: relative;
+	z-index: 0;
+	height: 56px;
+}
+/* .calendar_new_table td:hover{
+	cursor:pointer;
+	background: #eee;
+	border-radius: 4px;
+} */
+.calendar_firstline{
+	margin:0 auto;
+	width: 46px;
+	height: 46px;
+	border-radius: 4px;
+	border:1px solid #fff;
+}
+.calendar_firstline:hover{
+	width: 46px;
+	height: 46px;
+	cursor:pointer;
+	border-radius: 4px;
+	border:1px solid #6bc50d;	
+}
+.calendar_new_table td .cal_new_day{
+	text-align: center;
+	font-size: 18px;
+	padding-top: 6px;
+	color:#333;
+}
+.calendar_new_table td .cal_old_day{
+	text-align: center;
+	font-size: 12px;
+	color:#999;
+}
+/*空表格交互样式设置，通过js设置Class属性控制*/
+.empty_day:hover{
+	cursor:auto;
+	border:1px solid #fff;
+}
+.empty_day{
+	opacity: 0;
+}
+/*当前日期表格交互样式设置*/
+.current_day{
+	margin:0 auto;
+	width: 48px;
+	height: 48px;
+	cursor:pointer;
+	border-radius: 4px;
+	background: #6bc50d;
+	/*color:#fff !important;*/
+}
+/*选中样式设置*/
+.selected{
+	margin:0 auto;
+	width: 46px;
+	height: 46px;
+	cursor:pointer;
+	border-radius: 4px;
+	border:1px solid #6bc50d !important;	
+}
+/*假日标识*/
+.holiday_day{
+	position: absolute;
+	top:6px;
+	background: url(../img/holiday.png) 92% 8% no-repeat;
+	width: 46px;
+	height: 46px;
+	border-radius: 4px;
+	border:1px solid #fff;
+}
+.holiday_day:hover{
+	width: 46px;
+	height: 46px;
+	cursor:pointer;
+	border-radius: 4px;
+	border:1px solid #6bc50d;	
+}
+/*如果今天是假日标识颜色变化*/
+.holiday_today{
+	position: absolute;
+	top:6px;
+	background: url(../img/current.png) 92% 8% no-repeat;
+	width: 48px;
+	height: 48px;
+	cursor:pointer;
+	border-radius: 4px;
+	background: #6bc50d;
+}

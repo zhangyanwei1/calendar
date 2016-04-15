@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>360前端星计划_万年历</title>
+	<link rel="stylesheet" type="text/css" href="css/cal.css">
+</head>
+<body>
+	<div class="calendar">
+	<!--日历头部：新历，农历日期以及星期显示、年份切换、月份切换、返回今天-->
+		<div class="head">
+			<div class="logo">
+				<span class="switch_day">12</span>
+			</div>
+			<div class="logo_day">
+				<p class="new_day"><span class="new_day_year">2015</span>-<span class="new_day_month">01</span>-<span class="new_day_day">12</span> <span class="new_day_week">星期二</span></p>
+				<p class="old_day"><span class="animal_year">猴</span>年<span class="old_day_current"><span class="switch_old_month">三月</span> <span class="switch_old_day">初六</span></span></p>
+			</div>
+			<ul class="switch_year_month_day">
+				<li class="switch_year">
+					<img src="img/year.png">
+					<span class="switch_year_current"></span>
+					<ul class="year_list">
+
+					</ul>			
+				</li>
+				<li class="switch_month">
+					<img src="img/month.png">
+					<span class="switch_month_current"></span>
+					<ul class="month_list">
+						<li class="month_list1">一月</li>
+						<li class="month_list1">二月</li>
+						<li class="month_list1">三月</li>
+						<li class="month_list1">四月</li>
+						<li class="month_list1">五月</li>
+						<li class="month_list1">六月</li>
+						<li class="month_list1">七月</li>
+						<li class="month_list1">八月</li>
+						<li class="month_list1">九月</li>
+						<li class="month_list1">十月</li>
+						<li class="month_list1">十一月</li>
+						<li class="month_list1">十二月</li>
+					</ul>
+				</li>
+				<li class="switch_today">
+					<img src="img/day.png">
+					<span class="switch_today_current">今天</span>
+				</li>
+			</ul>
+		</div>
+		<!--日历表格开始-->
+		<div class="calendar_box">
+			<table class="calendar_new_table">
+				<tbody>
+					<tr>
+						<th>日</th>
+						<th>一</th>
+						<th>二</th>
+						<th>三</th>
+						<th>四</th>
+						<th>五</th>
+						<th>六</th>
+					</tr>
+					<tr>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day"></p>
+								<p class="cal_old_day"></p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day"></p>
+								<p class="cal_old_day"></p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day"></p>
+								<p class="cal_old_day"></p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day"></p>
+								<p class="cal_old_day"></p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">1</p>
+								<p class="cal_old_day">廿四</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">2</p>
+								<p class="cal_old_day">廿五</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">3</p>
+								<p class="cal_old_day">廿六</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">4</p>
+								<p class="cal_old_day">清明</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">5</p>
+								<p class="cal_old_day">廿八</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">6</p>
+								<p class="cal_old_day">廿九</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">7</p>
+								<p class="cal_old_day">初一</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">8</p>
+								<p class="cal_old_day">初二</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">9</p>
+								<p class="cal_old_day">初三</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">10</p>
+								<p class="cal_old_day">初四</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">11</p>
+								<p class="cal_old_day">初五</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">12</p>
+								<p class="cal_old_day">初六</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">13</p>
+								<p class="cal_old_day">初七</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">14</p>
+								<p class="cal_old_day">初八</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">15</p>
+								<p class="cal_old_day">初九</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">16</p>
+								<p class="cal_old_day">初十</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">17</p>
+								<p class="cal_old_day">十一</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">18</p>
+								<p class="cal_old_day">十二</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">19</p>
+								<p class="cal_old_day">谷雨</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">20</p>
+								<p class="cal_old_day">十四</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">21</p>
+								<p class="cal_old_day">十五</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">22</p>
+								<p class="cal_old_day">十六</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">23</p>
+								<p class="cal_old_day">十七</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">24</p>
+								<p class="cal_old_day">十八</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">25</p>
+								<p class="cal_old_day">十九</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">26</p>
+								<p class="cal_old_day">二十</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">27</p>
+								<p class="cal_old_day">廿一</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">28</p>
+								<p class="cal_old_day">廿二</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">29</p>
+								<p class="cal_old_day">廿四</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day">30</p>
+								<p class="cal_old_day">廿五</p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day"></p>
+								<p class="cal_old_day"></p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day"></p>
+								<p class="cal_old_day"></p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day"></p>
+								<p class="cal_old_day"></p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day"></p>
+								<p class="cal_old_day"></p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day"></p>
+								<p class="cal_old_day"></p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day"></p>
+								<p class="cal_old_day"></p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day"></p>
+								<p class="cal_old_day"></p>
+							</div>
+						</td>
+						<td>
+							<div class="calendar_firstline">
+								<p class="cal_new_day"></p>
+								<p class="cal_old_day"></p>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script src="js/switch.js" type="text/javascript"></script>
+</body>
+</html>
