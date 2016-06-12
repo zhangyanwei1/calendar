@@ -1,5 +1,4 @@
-window.onload=init;
-function init(){
+window.onload = function(){
 	select_list();
 	switch_year_month();
 	switch_year_current();
@@ -96,11 +95,15 @@ function switch_month_current(){
 //点击返回今天事件
 function back_tody(){
 	var year_current=document.getElementsByClassName('switch_year_current')[0];
+    var today = new Date();
 	var month_current=document.getElementsByClassName('switch_month_current')[0];
-
 	var switch_today=document.getElementsByClassName("switch_today")[0];
+    var new_day_week = document.getElementsByClassName("new_day_week")[0];
+
+    new_day_week.innerHTML = calWeek[today.getDay()];
 	switch_today.onclick=function(){
 		drawCld(tY,tM);
+        new_day_week.innerHTML = calWeek[today.getDay()];
 		year_current.innerHTML=tY+'年';
 		month_current.innerHTML=oldMonth[tM]+'月';
 
@@ -447,6 +450,7 @@ function drawCld(SY,SM) {
 		 		switch_day.innerHTML='0'+sObj.innerHTML;
 		 	}
 		 	new_day_week.innerHTML=calWeek[i%7];
+            // console.log(i);
 		 } 
 		 else{
 		 	sObj.style.color = '';
